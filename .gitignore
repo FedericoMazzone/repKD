@@ -127,3 +127,14 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Data
+data/
+
+# Visual Studio Code stuff
+.vscode/
+
+# Models
+test/AlexNet_CIFAR100/models
+test/MLP_MNIST/models
+test/ResNet18_Fashion/models
