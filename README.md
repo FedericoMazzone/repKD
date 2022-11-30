@@ -1,15 +1,25 @@
 # RepKD - Repeated Knowledge Distillation
 
-**NOTE**
+<!-- **NOTE**
 This repository is still in active development.
 
----
+--- -->
 
 RepKD is a tool that enhances the privacy of machine learning models. It applies the repeated knowledge distillation strategy described in [[1]](https://dl.acm.org/doi/abs/10.1145/3560830.3563721) to mitigate potential privacy attacks. If you use our repository, please [cite us](#how-to-cite-repkd). The tool assesses the privacy of a model against two membership inference attacks: black-box [[2]](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7958568), and white-box [[3]](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8835245). The library provides some example cases in the ```test``` folder.
 
 RepKD takes a trained input model and applies several rounds of knowledge distillation with masked labeling. The models crafted this way are then tested against membership inference attacks and their utility-privacy tradeoff is thus determined. You can finally choose which resulting model better fit your needs.
 
 <img src="img/repkd_models_chart.png" width="400"/>
+
+## Usage
+
+Install the local project with
+
+```
+pip install -e .
+```
+
+Then you can find the knowledge distillation building block in ```repkd/kd.py```, and the template for the repeated KD in the test folder, e.g. ```test/MLP_MNIST/exp_repkd.py```.
 
 ## References
 
